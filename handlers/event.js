@@ -8,7 +8,7 @@ module.exports = (client) => {
     let jsfile = files.filter(f => f.split(".").pop() === "js")
     if (jsfile.length <= 0) {
       console.log("❌ No events to load...");
-      table.addRow("There are no events to load...", '❌');
+      table.addRow("No events to load...", '❌');
     }else{
       jsfile.forEach((f, i) => {
         delete require.cache[require.resolve(`../events/${f}`)]
@@ -25,7 +25,7 @@ module.exports = (client) => {
           }
          }
       });
-      setTimeout(()=>console.log(table.toString()),1500);
+      setTimeout(()=>console.log(table.toString()),1000);
     }
   })
 }
