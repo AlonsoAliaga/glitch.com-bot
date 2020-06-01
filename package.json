@@ -1,7 +1,7 @@
 {
   "name": "YourBotName",
-  "version": "1.0.0",
-  "description": "Your really short bot description.",
+  "version": "0.1",
+  "description": "A really short description about your bot.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,8 +20,17 @@
     "pretty-ms": "^7.0.0",
     "better-sqlite3": "^7.0.1",
     "ascii-table": "^0.0.9",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.0",
+    "child_process": "^1.0.2",
+    "dotenv": "^8.2.0"
   },
   "devDependencies": {},
-  "keywords": []
+  "keywords": [
+    "codeando",
+    "con",
+    "alonso",
+    "glitch.com",
+    "discord.js",
+    "bot"
+  ]
 }
