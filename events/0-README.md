@@ -6,6 +6,7 @@ Press Enter and paste the following code in the new file:
 const Discord = require("discord.js");
 module.exports = {
   name: "eventname",
+  disabled: false,
   once: false, //If event should be fired once, set to true.
   run: async (client,parms) => {
     //Code here
@@ -21,6 +22,7 @@ Presiona enter y pega lo siguiente dentro del nuevo archivo:
 const Discord = require("discord.js");
 module.exports = {
   name: "nombredelevento",
+  disabled: false,
   once: false, //Si el evento solo se debe correr una vez, pones true.
   run: async (client,parametros) => {
     //Code here
