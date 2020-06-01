@@ -40,8 +40,9 @@ const client = new Discord.Client({
 });
 
 //Create editable values for commands/events
+client.prefixes = ["!","a!"] //Yes, you will be able to have different prefixes.
 client.footer = `MyBot v${packageFile.version}`
-client.developerid = "290640988677079041"; //Replace with your ID
+client.developerid = "290640988677079041"; //Replace it with your ID!
 client.developer;
 
 //Load handlers
