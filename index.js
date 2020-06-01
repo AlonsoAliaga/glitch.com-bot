@@ -108,7 +108,9 @@ client.emoji = { //Easy way to save emojis and use them in messages and embeds.
   check:"",
   checkid:"",
   cross:"",
-  crossid:""
+  crossid:"",
+  verified:"",
+  verifiedid:""
 }
 
 //Client login
