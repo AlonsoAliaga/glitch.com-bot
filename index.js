@@ -86,7 +86,7 @@ client.colors = { //Easy way to save colors and use them for embeds.
 }
 client.emoji = { //Easy way to save emojis and use them in messages and embeds.
   //Quick explanation: This will allow you to use "client.emoji.check" where you need the emoji.
-  //What about "lient.emoji.checkid"? This will allow you to use it ALSO in reactions. Example:
+  //What about "client.emoji.checkid"? This will allow you to use it ALSO in reactions. Example:
   // message.react(client.emoji.checkid).catch(e=>{});
   check:"",
   checkid:"",
