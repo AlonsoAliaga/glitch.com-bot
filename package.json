@@ -1,6 +1,6 @@
 {
   "name": "YourBotName",
-  "version": "0.1",
+  "version": "0.0.1",
   "description": "A really short description about your bot.",
   "main": "index.js",
   "scripts": {
