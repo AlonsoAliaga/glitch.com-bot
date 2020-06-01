@@ -21,6 +21,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const child_process = require("child_process");
 const packageFile = require("./package.json");
+const Database = require('better-sqlite3');
 require("dotenv").config({ path:"./.env"}); //Not necessary if using glitch. Necessary if not on glitch.
 
 //Express - Auto ping
