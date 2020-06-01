@@ -5,7 +5,7 @@ Press Enter and paste the following code in the new file:
 ```js
 const Discord = require("discord.js");
 module.exports = {
-  name: "name",
+  name: "commandname",
   aliases: [],
   description: "Description",
   category: "CATEGORY",
@@ -25,7 +25,7 @@ Presiona enter y pega lo siguiente dentro del nuevo archivo:
 ```js
 const Discord = require("discord.js");
 module.exports = {
-  name: "nombre del comando",
+  name: "nombredelcomando",
   aliases: [],
   description: "Descripción del comando",
   category: "CATEGORIA",
