@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const prettyMs = require("pretty-ms");
 module.exports = {
   name: "ready",
+  once: false,
   run: async (client) => {
     console.log(`✔️ Bot successfully logged as ${client.user.tag} (${client.user.id})`)
     runDefaults(client);
