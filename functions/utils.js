@@ -1,6 +1,6 @@
-#You can create "global" functions here. They will be available wherever you can access to "client"
-#Simply call " client.utils.yourMethod(parameters); "
-#There is an example below
+//You can create "global" functions here. They will be available wherever you can access to "client"
+//Simply call " client.utils.yourMethod(parameters); "
+//There is an example below
 
 module.exports.capitalize = (string = "",onlyFirst = true) => {
   if(string.length === 0) return "";
