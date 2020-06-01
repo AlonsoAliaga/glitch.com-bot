@@ -112,4 +112,6 @@ client.emoji = { //Easy way to save emojis and use them in messages and embeds.
 }
 
 //Client login
-client.login(process.env.DISCORD_TOKEN);
+client.login(process.env.DISCORD_TOKEN).catch(e=>{
+  console.log(`🚫 An invalid token was provided. Make sure you update DISCORD_TOKEN in .env file after you import the project from Github!`)
+});
