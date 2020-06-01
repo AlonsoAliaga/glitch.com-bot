@@ -4,4 +4,3 @@
 #Once done that, type "refresh" in project terminal. Delete the necessary files, uncomment the code and type "refresh" in terminal again.
 
 data/*.db
-!data/*.md
