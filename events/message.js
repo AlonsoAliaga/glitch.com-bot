@@ -23,6 +23,9 @@ module.exports = {
     //is set to false. Recommended to keep it.
     if (!message.member) message.member = await message.guild.members.fetch(message);
     
+    //Used for debug reasons.
+    console.log(`(#${message.channel.name}) ${message.author.tag}: ${message.content||`*Empty message*`}`)
+    
     //Make your bot reply when someone mention the bot.
     if (client.mentions.includes(message.content)){
       //message.react(client.emoji.checkid).catch(e=>{})
