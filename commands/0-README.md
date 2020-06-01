@@ -9,6 +9,7 @@ module.exports = {
   aliases: [],
   description: "Description",
   category: "CATEGORY",
+  disabled: false,
   developer: true,
   owner: true,
   run: async (client, message, args, prefix) => {
@@ -29,6 +30,7 @@ module.exports = {
   aliases: [],
   description: "Descripción del comando",
   category: "CATEGORIA",
+  disabled: false,
   developer: true,
   owner: true,
   run: async (client, message, args, prefix) => {
