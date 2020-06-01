@@ -22,6 +22,7 @@ module.exports = (client) => {
           }
         }
       });
+      if(client.commands.size === 0)table.addRow("No commands to load...", '❌');
     }
     setTimeout(()=>console.log(table.toString()),1000);
   })
