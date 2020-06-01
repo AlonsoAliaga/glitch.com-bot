@@ -3,6 +3,7 @@ const prettyMs = require("pretty-ms");
 module.exports = {
   name: "message",
   disabled: false,
+  once: false,
   run: async (client,message) => {
     if (message.channel.type !== "text") {
       return;
