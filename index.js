@@ -45,7 +45,7 @@ client.developerid = "290640988677079041"; //Replace with your ID
 client.developer;
 
 //Load handlers
-["command","event"].forEach(handler => {
+["commands","events"].forEach(handler => {
     require(`./handlers/${handler}`)(client);
 });
 
