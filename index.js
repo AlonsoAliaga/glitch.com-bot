@@ -56,6 +56,23 @@ client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 client.events = new Discord.Collection();
 
+//Creating databases
+//Set to true if you want to create the database
+if(false){
+  client.database = new Database('./data/membersdata.db');
+  //The following line creates a table for basic bots. you MUST edit this if you want to add new columns before you create the database.
+  //Otherwise you'll have to run statements to alter the current table to add new columns.
+  //Uncomment the following line when you are 100% sure it has all you need to store in database.
+  //The provided code should be (in most of the cases) enough for a basic private bot (For one server only)
+  //If you want to create a public bot, you will probably need a database PER guild.
+  /*
+  client.database.prepare("CREATE TABLE IF NOT EXISTS membersinfo (userid TEXT PRIMARY KEY,usertag TEXT DEFAULT 'Unknown#0000',`+
+                        `coins INTEGER DEFAULT 0,bank INTEGER DEFAULT 0,experience INTEGER DEFAULT 0,level INTEGER DEFAULT 1,`,
+                        `registerdate BIGINT DEFAULT 0,dailyenddate BIGINT DEFAULT 0,robenddate BIGINT DEFAULT 0,`+
+                        `robbedenddate BIGINT DEFAULT 0,streak INTEGER DEFAULT 0,messagescount INTEGER DEFAULT 0`)").run();
+  */
+}
+
 //Create utils classes
 client.utils = require("./functions/utils.js");
 
