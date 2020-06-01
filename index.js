@@ -26,7 +26,7 @@ require("dotenv").config({ path:"./.env"}); //Not necessary if using glitch. Nec
 //Express - Auto ping
 app.listen(process.env.PORT);
 app.get("/ping", (request, response) => {
-  console.log(`[PING] ${(new Date()).toLocaleString().split("GMT")[0].trim()} ping received!");
+  console.log(`[PING] ${(new Date()).toLocaleString().split("GMT")[0].trim()} ping received!`);
   response.sendStatus(200);
 });
 setInterval(() => {
