@@ -59,7 +59,7 @@ client.events = new Discord.Collection();
 
 //Creating databases
 //Set to true if you want to create the database
-if(false){
+if (false){
   client.database = new Database('./data/membersdata.db');
   //The following line creates a table for basic bots. you MUST edit this if you want to add new columns before you create the database.
   //Otherwise you'll have to run statements to alter the current table to add new columns.
@@ -72,7 +72,7 @@ if(false){
                         `registerdate BIGINT DEFAULT 0,dailyenddate BIGINT DEFAULT 0,robenddate BIGINT DEFAULT 0,`+
                         `robbedenddate BIGINT DEFAULT 0,streak INTEGER DEFAULT 0,messagescount INTEGER DEFAULT 0)`).run();
   */
-}
+} else console.log(`📛 Database option is not enabled. "client.database" will not be available. Make sure you enable it if you'll use it!`)
 
 //Create utils classes
 client.utils = require("./functions/utils.js");
