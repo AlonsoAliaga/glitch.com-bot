@@ -67,10 +67,10 @@ if(false){
   //The provided code should be (in most of the cases) enough for a basic private bot (For one server only)
   //If you want to create a public bot, you will probably need a database PER guild.
   /*
-  client.database.prepare("CREATE TABLE IF NOT EXISTS membersinfo (userid TEXT PRIMARY KEY,usertag TEXT DEFAULT 'Unknown#0000',`+
+  client.database.prepare(`CREATE TABLE IF NOT EXISTS membersinfo (userid TEXT PRIMARY KEY,usertag TEXT DEFAULT 'Unknown#0000',`+
                         `coins INTEGER DEFAULT 0,bank INTEGER DEFAULT 0,experience INTEGER DEFAULT 0,level INTEGER DEFAULT 1,`,
                         `registerdate BIGINT DEFAULT 0,dailyenddate BIGINT DEFAULT 0,robenddate BIGINT DEFAULT 0,`+
-                        `robbedenddate BIGINT DEFAULT 0,streak INTEGER DEFAULT 0,messagescount INTEGER DEFAULT 0`)").run();
+                        `robbedenddate BIGINT DEFAULT 0,streak INTEGER DEFAULT 0,messagescount INTEGER DEFAULT 0)`).run();
   */
 }
 
