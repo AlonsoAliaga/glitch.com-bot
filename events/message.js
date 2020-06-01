@@ -23,7 +23,7 @@ module.exports = {
     if (!message.member) message.member = await message.guild.members.fetch(message);
     
     //Make your bot reply when someone mention the bot.
-    if(client.botmentions.includes(message.content)){
+    if(client.mentions.includes(message.content)){
       message.react(client.emoji.checkid).catch(e=>{})
       let description = [
         `${message.author}, **do you need help?** Use #support or contact a staff member!`
