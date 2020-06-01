@@ -18,9 +18,9 @@ module.exports = (client) => {
             client.events.set(event.name, event);
             table.addRow(f, '✅');
             if(event.once){
-              client.once(eventName, event.run.bind(null, client));
+              client.once(event.name, event.run.bind(null, client));
             }else{
-              client.on(eventName, event.run.bind(null, client));
+              client.on(event.name, event.run.bind(null, client));
             }
           }
          }
