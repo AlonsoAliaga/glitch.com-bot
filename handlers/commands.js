@@ -7,7 +7,7 @@ module.exports = (client) => {
     if (err) console.log(err);
     let jsfile = files.filter(f => f.split(".").pop() === "js")
     if (jsfile.length <= 0) {
-        console.log("❌ No commands to load...");
+        //console.log("❌ No commands to load...");
         table.addRow("No commands to load...", '❌');
     }else{
       jsfile.forEach((f, i) => {
