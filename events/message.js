@@ -22,6 +22,15 @@ module.exports = {
     //is set to false. Recommended to keep it.
     if (!message.member) message.member = await message.guild.members.fetch(message);
     
+    //Make your bot reply when someone mention the bot.
+    if(client.botmentions.includes(message.content)){
+      message.react(client.emoji.checkid).catch(e=>{})
+      let description = [
+        `${message.author}, **do you need help?** Use #support or contact a staff member!`
+      ]
+      message.channel.send(description.join("\n")).then(m=>m.delete({timeout:15000}).catch(e=>{})).catch(e=>{})
+    }
+    
     //This is the command handler.
     if (message.content && client.prefixes.some(p=>message.content.toLowerCase().startsWith(p))) {
       let prefixUsed = client.prefixes.find(p=>message.content.toLowerCase().startsWith(p));
