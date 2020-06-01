@@ -1,4 +1,3 @@
-const Canvas = require("canvas");
 const Discord = require("discord.js");
 const prettyMs = require("pretty-ms");
 module.exports = {
