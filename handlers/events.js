@@ -25,6 +25,7 @@ module.exports = (client) => {
           }
          }
       });
+      if(client.events.size === 0)table.addRow("No events to load...", '❌');
     }
     setTimeout(()=>console.log(table.toString()),1000);
   })
