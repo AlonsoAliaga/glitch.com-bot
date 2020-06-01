@@ -1,6 +1,6 @@
 # Commands section
-Create new commands files here.
-Click "New File" and type: commands/yourcommand.js
+Create new commands files here.\
+Click "New File" and type: commands/yourcommand.js\
 Press Enter and paste the following code in the new file:
 ```js
 const Discord = require("discord.js");
@@ -19,8 +19,8 @@ module.exports = {
 ```
 
 # Sección de comandos
-Crea los nuevos archivos para comandos aquí.
-Clic en "New File" y escribe: commands/tucomando.js
+Crea los nuevos archivos para comandos aquí.\
+Clic en "New File" y escribe: commands/tucomando.js\
 Presiona enter y pega lo siguiente dentro del nuevo archivo:
 ```js
 const Discord = require("discord.js");
