@@ -23,8 +23,8 @@ module.exports = {
     if (!message.member) message.member = await message.guild.members.fetch(message);
     
     //Make your bot reply when someone mention the bot.
-    if(client.mentions.includes(message.content)){
-      message.react(client.emoji.checkid).catch(e=>{})
+    if (client.mentions.includes(message.content)){
+      //message.react(client.emoji.checkid).catch(e=>{})
       let description = [
         `${message.author}, **do you need help?** Use #support or contact a staff member!`
       ]
@@ -41,7 +41,7 @@ module.exports = {
         command = client.commands.get(cmd);
       } else if (client.aliases.has(cmd)) {
         command = client.commands.get(client.aliases.get(cmd));
-      }else return;
+      } else return;
       if (command.owner && message.author.id !== message.guild.ownerID) return; //Only for guild's owner.
       if (command.developer && message.author.id !== client.developerid) return; //Only for bot's developer.
       if (command.cooldown && command.cooldownCollection) { //Cooldown.
