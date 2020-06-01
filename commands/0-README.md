@@ -12,6 +12,9 @@ module.exports = {
   disabled: false,
   developer: true,
   owner: true,
+  cooldown: 15000,
+  cooldownCollection: new Discord.Collection(),
+  deleteOnCooldown: true,
   run: async (client, message, args, prefix) => {
     message.delete({timeout:500}).catch(e=>{});
     
@@ -33,6 +36,9 @@ module.exports = {
   disabled: false,
   developer: true,
   owner: true,
+  cooldown: 15000,
+  cooldownCollection: new Discord.Collection(),
+  deleteOnCooldown: true,
   run: async (client, message, args, prefix) => {
     message.delete({timeout:500}).catch(e=>{});
     
