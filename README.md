@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://www.youtube.com/channel/UCe93CEbgpUkiYO3tjOspPJQ">
+    <img src="https://i.imgur.com/9qRTFaQ.png" alt="Go to Youtube channel!" width="200" height="200" href="https://www.youtube.com/channel/UCe93CEbgpUkiYO3tjOspPJQ">
+  </a>
+</p>
+
 # Discord.js bot for glitch.com
 ### How to use? 💎
 Import this to your glitch.com project to be able to start coding your new discord.js bot.
