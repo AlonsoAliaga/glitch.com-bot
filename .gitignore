@@ -1,0 +1,7 @@
+#Important to prevent excesive disk space usage for large databases
+#This will prevent you from seeing .db files inside "data" folder. However they are STILL there.
+#If you want to disable this and be able to see .db files to be able to delete them comment the lines below using #
+#Once done that, type "refresh" in project terminal. Delete the necessary files, uncomment the code and type "refresh" in terminal again.
+
+data/*.db
+!data/*.md
