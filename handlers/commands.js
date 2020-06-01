@@ -22,7 +22,7 @@ module.exports = (client) => {
           }
         }
       });
-      setTimeout(()=>console.log(table.toString()),1000);
     }
+    setTimeout(()=>console.log(table.toString()),1000);
   })
 }
