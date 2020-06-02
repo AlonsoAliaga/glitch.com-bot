@@ -24,7 +24,7 @@ module.exports = {
     if (!message.member) message.member = await message.guild.members.fetch(message);
     
     //Used for debug reasons.
-    console.log(`(#${message.channel.name}) ${message.author.tag}: ${message.content||`*Empty message*`}`)
+    console.log(`(#${message.channel.name}) ${message.author.tag}: ${message.content||`*Empty message*`}${message.attachments.size!==0?` (Files: ${message.attachments.size})`:``}`)
     
     //Make your bot reply when someone mention the bot.
     if (client.mentions.includes(message.content)){
