@@ -58,7 +58,7 @@ module.exports.getMember = async (message, toCheck, defaultAuthor = false, inclu
   }
   return member || (defaultAuthor ? message.member : member);
 }
-function parseDate(toParse){
+module.exports.parseDate = (toParse) => {
   let date = new Date();
   if (!toParse) toParse = date;
   if (!isNaN(toParse)) {
