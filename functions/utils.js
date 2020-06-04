@@ -68,3 +68,64 @@ module.exports.parseDate = (toParse) => {
   } else return undefined;
   return date.toLocaleString().split("GMT")[0].trim();
 }
+let defaultParseOptions = {
+  full: false,
+  displayMilliseconds: false,
+  delimiter: " ",
+  years: "years",
+  year: "year",
+  yearsuffix: "y",
+  days: "days",
+  day: "day",
+  daysuffix: "d",
+  hours: "hours",
+  hour: "hour",
+  hoursuffix: "h",
+  minutes: "minutes",
+  minute: "minute",
+  minutesuffix: "m",
+  seconds: "seconds",
+  second: "second",
+  secondsuffix: "s",
+  milliseconds: "milliseconds",
+  millisecond: "millisecond",
+  millisecondsuffix: "ms"
+}
+module.exports.parseMs = (milliseconds = 0, parseOptions = {}) => {
+  let options = Object.assign({}, defaultParseOptions, parseOptions);
+  function getSuffix(amount,short,singular,plural) {
+    if (!options.full) return short;
+    return amount === 1 ? singular : plural;
+  }
+  if(milliseconds < 1000 && !options.displayMilliseconds) {
+    return `0${getSuffix(0,options.secondsuffix,options.second,options.seconds)}`
+  }
+  let result = []
+  let years = Math.floor(milliseconds/YEAR);
+  if (years !== 0) {
+    result.push(`${years}${getSuffix(years,options.yearsuffix,options.year,options.years)}`)
+    milliseconds = milliseconds - (years * YEAR)
+  }
+  let days = Math.floor(milliseconds/DAY);
+  if (days !== 0) {
+    result.push(`${days}${getSuffix(days,options.daysuffix,options.day,options.days)}`)
+    milliseconds = milliseconds - (days * DAY)
+  }
+  let hours = Math.floor(milliseconds/HOUR);
+  if (hours !== 0) {
+    result.push(`${hours}${getSuffix(hours,options.hoursuffix,options.hour,options.hours)}`)
+    milliseconds = milliseconds - (hours * HOUR)
+  }
+  let minutes = Math.floor(milliseconds/MINUTE);
+  if (minutes !== 0) {
+    result.push(`${minutes}${getSuffix(minutes,options.minutesuffix,options.minute,options.minutes)}`)
+    milliseconds = milliseconds - (minutes * MINUTE)
+  }
+  let seconds = Math.floor(milliseconds/SECOND);
+  if (seconds !== 0) {
+    result.push(`${seconds}${getSuffix(seconds,options.secondsuffix,options.second,options.seconds)}`)
+    milliseconds = milliseconds - (seconds * SECOND)
+  }
+  if (milliseconds !== 0 && options.displayMilliseconds) result.push(`${milliseconds}${getSuffix(milliseconds,options.millisecondsuffix,options.millisecond,options.milliseconds)}`)
+  return result.join(options.delimiter)
+}
